@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+
+body {
+  margin: 0;
+  background: #d0d1d6;
+}
+
+header {
+  background: #2D2E2B; 
+  color: #FFF9FE;
+  padding-left: 30px;
+  border-bottom: solid 4px #E3DF6B;
+  position: fixed;
+/*   overflow: hidden; */
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 2;
+  font-family: 'Lemonada', cursive;
+  font-size: 12px;
+}
+
+#title {
+  postion: relative;
+  float: left;
+}
+
+main {
+  margin-top: 70px;
+}
+
+.top {
+  width: 100%;
+  height: 400px;
+  background: #2D2E2B;
+  clip-path: polygon(100% 0, 100% 100%, 77% 94%, 73% 83%, 69% 92%, 0 78%, 0 0);
+}
+
+#frontImg {
+  width: 1000px;
+  position: relative;
+  top: -350px;
+  left: 20%;
+  border-radius: 25px;
+  box-shadow: 15px 15px 25px 1px #2D2E2B;
+}
+
+.offers {
+  width: 100%;
+  height: 900px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+}
+
+.description {
+  width: 400px;
+  height: 800px;
+  margin: 15px;
+  background: #FFF9FE;
+  padding: 20px;
+  box-shadow: 15px 15px 25px 1px #2D2E2B;
+  color: #2D2E2B;
+  font-family: 'Crete Round', serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+.description img {
+  height: 270px;
+  object-fit: cover;
+  clip-path: polygon(20% 0, 100% 0, 100% 86%, 79% 100%,  0 100%, 0 15%);
+}
+
+.description:hover .tr{
+  animation-name: triangle;
+  clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 0 0, 75% 25%, 75% 75%, 14% 75%, 25% 100%, 100% 100%, 100% 0%);
+  animation-duration: 2s;
+}
+
+.tr {
+  background: #E3DF6B;
+  height: 200px;
+  width: 200px;
+  clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+  transform: rotate(45deg);
+  position: relative;
+  top: -120px;
+  left: 30%;
+}
+
+@keyframes triangle {
+  from {
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+  } to {
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 0 0, 75% 25%, 75% 75%, 14% 75%, 25% 100%, 100% 100%, 100% 0%);
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .description {
+    width: 600px;
+    height: 600px;
+    float: right;
+    top: -200px;
+    right: 300px;
+  }
+  
+  #name {
+    top: 70px;
+    left: -150px;
+  }
+}
