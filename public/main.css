@@ -9,28 +9,88 @@ body {
 header {
   background: #2D2E2B; 
   color: #FFF9FE;
-  padding-left: 30px;
   border-bottom: solid 4px #E3DF6B;
   position: fixed;
-/*   overflow: hidden; */
   top: 0;
   width: 100%;
-  height: 70px;
+  height: 80px;
   z-index: 2;
   font-family: 'Lemonada', cursive;
-  font-size: 12px;
 }
 
-#title {
-  postion: relative;
-  float: left;
+#name {
+  font-size: 18px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-left: solid 3px white;
+  border-right: solid 3px white;
+  letter-spacing: 6px;
+  color: #E3DF6B;
+}
+
+nav {
+  display: block;
+  position: relative;
+  float: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  padding: 10px;
+  color: #FFF9FE;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-family: 'Lemonada', cursive;
+}
+
+a {
+  color: #FFF9FE;
+  text-decoration: none;
+  font-size: 19px;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 25px;
+  text-align: center;
+  transition: all .35s;
+}
+
+a:after {
+  position: absolute;
+  content: "";
+  top: 27px;
+  left: 0;
+  width: 0;
+  height: 3%;
+  background: #E3DF6B;
+  color: #E3DF6B;
+  transition: all .35s;
+}
+
+a span{
+  position: relative;
+  z-index: 2;
+}
+
+a:hover:after{
+  width: 100%;
 }
 
 main {
   margin-top: 70px;
 }
 
-.top {
+#top {
   width: 100%;
   height: 400px;
   background: #2D2E2B;
@@ -41,12 +101,62 @@ main {
   width: 1000px;
   position: relative;
   top: -350px;
-  left: 20%;
   border-radius: 25px;
   box-shadow: 15px 15px 25px 1px #2D2E2B;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.offers {
+#about{
+  width: 100%;
+  height: 600px;
+  background:  #2D2E2B;
+  position: relative;
+  top: -200px;
+}
+
+.title {
+  color: #E3DF6B;
+  background:  #2D2E2B;
+  text-align: center;
+  font-family: 'Lemonada', cursive;
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+.title2 {
+  color: #2D2E2B;
+  text-align: center;
+  font-family: 'Lemonada', cursive;
+  font-size: 40px;
+  letter-spacing: 5px;
+  position: relative;
+  top: -70px;
+}
+
+.shopImg {
+  width: 500px;
+  height: 700px;
+  object-fit: cover;
+  float: left;
+  position: relative;
+  top: -80px;
+  margin: 30px;
+  clip-path: polygon(20% 0, 100% 0, 100% 86%, 79% 100%,  0 100%, 0 15%);
+}
+
+.aboutText {
+  background: #FFF9FE;
+  color: #2D2E2B;
+  font-size: 25px;
+  font-family: 'Crete Round', serif;
+  margin-left: 40%;
+  margin-right: 7%;
+  padding: 30px;
+}
+
+#offers {
   width: 100%;
   height: 900px;
   margin: 0;
@@ -102,15 +212,26 @@ main {
 
 @media only screen and (max-width: 1400px) {
   .description {
-    width: 600px;
-    height: 600px;
+    width: 250px;
+    height: 800px;
     float: right;
     top: -200px;
     right: 300px;
   }
   
+  .tr {
+  background: #E3DF6B;
+  height: 200px;
+  width: 200px;
+  top: -120px;
+  left: 10%;
+}
+  
+  a {
+    font-size: 14px;
+  }
+  
   #name {
-    top: 70px;
-    left: -150px;
+    font-size: 18px;
   }
 }
